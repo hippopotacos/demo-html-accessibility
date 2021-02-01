@@ -6,13 +6,16 @@
     <title>demo-html-accessibility</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/main.js" defer></script>
 </head>
 <body>
     <main class="main">
-        <form action="">
+        <h1>demo-html-accessibility</h1>
+        <form action="" class="main__container">
             <div class="main__inner">
-                <label for=""><input type="file"><span>選択されていません</span></label>
+                <label class="file" for=""><input type="file" id="select"><span class="file__text" id="name">選択されていません</span></label>
+                <div id="thumbnail">ここにサムネイルを表示します。</div>
             </div>
             <div class="main__inner">
                 <label class="checkbox" for="checkbox-1"><input type="checkbox" name="checkbox-1" id="checkbox-1" value="1"><span class="checkbox-icon"></span><span class="checkbox-label">check</span></label>

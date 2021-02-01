@@ -4,8 +4,12 @@
     max-width: 100%;
 }
 
-.main__inner + .main__inner {
-    margin-top: 20px;
+.main__container {
+    margin-top: 48px;
+}
+
+.main__inner {
+    margin-top: 24px;
 }
 
 input {
