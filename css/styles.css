@@ -18,6 +18,32 @@ input {
 
 
 
+/* file */
+.file > input {
+    position: absolute;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+}
+
+.file:focus-within {
+    outline: 2px;
+}
+
+.file__button {
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    border: none;
+    background-color: #04c;
+    color: #fff;
+}
+
+.file__text {
+    margin-left: 4px;
+}
+
+
 /* checkbox */
 .checkbox {
     position: relative;
@@ -49,7 +75,6 @@ input {
     font-size: 1em;
     -webkit-appearance: none;
     appearance: none;
-    box-sizing: border-box;
     z-index: 2;
 
 }
@@ -67,8 +92,8 @@ input {
     left: 50%;
     width: 30%;
     height: 60%;
-    border-bottom: .2em solid #00f;
-    border-right: .2em solid #00f;
+    border-bottom: .2em solid #04c;
+    border-right: .2em solid #04c;
     transform:
         translate( -50%, 0 )
         rotate( 45deg );
