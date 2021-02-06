@@ -1,8 +1,9 @@
 // File APIに対応しているか確認
 if(window.File) {
-    const thumbnail = document.getElementById('thumbnail');
-    const select = document.getElementById('select');
-    const filename = document.getElementById('name');
+    const thumbnail = document.getElementById('thumbnail-1');
+    const select = document.getElementById('image-1');
+    const filename = document.getElementById('filename-1');
+    const deleteButton = document.getElementById('delete-1');
  
     // ファイルが選択されたとき
     select.addEventListener('change', function(e) {
@@ -26,11 +27,20 @@ if(window.File) {
         }
         // ファイル読み取りに成功したとき
         reader.onload = function() {
-            const insert = '<img src="' + reader.result + '"><br>';
+            deleteButton.classList.add('is-show');
+            const insert = '<img src="' + reader.result + '">';
             thumbnail.innerHTML = insert;
             filename.innerHTML = fileData.name;
         }
         // ファイル読み取りを実行
         reader.readAsDataURL(fileData);
     }, false);
+
+    deleteButton.addEventListener('click', function(){
+        deleteButton.classList.remove('is-show');
+        select.value = '';
+        const insert = '<img src="">';
+        thumbnail.innerHTML = insert;
+        filename.innerHTML = '選択されていません';
+    });
 }

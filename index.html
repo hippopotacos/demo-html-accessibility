@@ -14,8 +14,14 @@
         <h1>demo-html-accessibility</h1>
         <form action="" class="main__container">
             <div class="main__inner">
-                <label class="file"><input type="file"><button type="button" class="file__button" id="select">ファイルを選択</button><span class="file__text" id="name">選択されていません</span></label>
-                <div id="thumbnail">ここにサムネイルを表示します。</div>
+                <div>
+                    <label class="file" for="image-1"><input type="file" id="image-1" name="image-1"><span type="button" class="file__button" id="select">ファイルを選択</span></label>
+                    <p id="filename-1" class="file__text">選択されていません</p>
+                </div>
+                <div>
+                    <div id="thumbnail-1" class="file__thumbnail"></div>
+                    <button type="button" id="delete-1" class="file__delete">delete</button>
+                </div>
             </div>
             <div class="main__inner">
                 <label class="checkbox" for="checkbox-1"><input type="checkbox" name="checkbox-1" id="checkbox-1" value="1"><span class="checkbox-icon"></span><span class="checkbox-label">check</span></label>
