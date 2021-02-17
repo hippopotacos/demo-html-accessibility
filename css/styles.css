@@ -240,6 +240,7 @@ input {
     appearance: none;
     background: none;
     box-sizing: border-box;
+    position: relative;
     width: 100%;
     margin: 0;
     font-size: 16px;
@@ -260,4 +261,22 @@ input {
     box-shadow: 0 3px 4px rgb(0 91 166 / 30%) inset;
     outline: 3px solid #005BA6;
     outline-offset: -3px;
+}
+
+.selectbox[data-select-value='1'] .selectbox__body {
+    padding-left: 40px;
+}
+
+.selectbox[data-select-value='1']::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #f00;
 }

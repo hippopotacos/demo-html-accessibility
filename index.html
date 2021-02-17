@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/js/main.js" defer></script>
+    <script src="/js/handleInputFiles.js" defer></script>
+    <script src="/js/addIconToSelectBox.js" defer></script>
 </head>
 <body>
     <main class="main">
@@ -44,8 +45,8 @@
                     <label class="radio" for="radio2"><input type="radio" name="radio" id="radio2" value="2"><span class="radio-icon"></span><span class="radio-label">radio 2</span></label>
                 </div>
             </div>
-            <div class="main__inner selectbox">
-                <select class="selectbox__body" required>
+            <div id="js-selectbox-wrapper" class="main__inner selectbox" data-select-value="0">
+                <select id="js-selectbox" class="selectbox__body" required>
                     <option value="" hidden>Placeholder</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
