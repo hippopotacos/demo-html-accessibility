@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/js/handleInputFiles.js" defer></script>
     <script src="/js/addIconToSelectBox.js" defer></script>
+    <script src="/js/toggleDisabled.js" defer></script>
 </head>
 <body>
     <main class="main">
@@ -36,6 +37,12 @@
             </div>
             <div class="main__inner">
                 <label class="checkbox" for="checkbox-1"><input type="checkbox" name="checkbox-1" id="checkbox-1" value="1"><span class="checkbox-icon"></span><span class="checkbox-label">check</span></label>
+            </div>
+            <div class="main__inner">
+                <div>
+                    <label class="checkbox" for="checkbox-2"><input type="checkbox" name="checkbox-2" id="checkbox-2" value="2" class="js-toggle-disabled"><span class="checkbox-icon"></span><span class="checkbox-label">check</span></label>
+                </div>
+                <input type="text" class="js-disabled-target">
             </div>
             <div class="main__inner">
                 <div>
